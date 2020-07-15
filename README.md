@@ -1,4 +1,4 @@
-# Collaborative Research: RI: Medium: Learning Joint Crowd-Space Embeddings for Cross-Modal Crowd Behavior Prediction
+# Learning Joint Crowd-Space Embeddings for Cross-Modal Crowd Behavior Prediction
 
 GitHub README page.
 
