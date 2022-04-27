@@ -1,0 +1,459 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+	
+	h1 {
+		font-size:32px;
+		font-weight:300;
+	}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+	table tr#ROW1 {background-color:#dddddd}
+	table tr#ROW2 {background-color:#ffffff}
+	
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		15px 15px 0 0px #fff, /* The fourth layer */
+		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		20px 20px 0 0px #fff, /* The fifth layer */
+		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		25px 25px 0 0px #fff, /* The fifth layer */
+		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+<html>
+<head>
+	<title>Summer Workshop on AI - Special Topic on Human, Crowd, Environment and Robotics
+</title>
+<!--	
+	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+<!--	
+	<meta property="og:title" content="Project Neuro-Cognitive Modeling of Environments and Humans." />
+	<meta property="og:description" content="Paper description." />
+-->
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-CXW38J4WY8"></script> 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-CXW38J4WY8');
+	</script>
+</head>
+
+<body>
+	<br>
+	<center>
+		<span style="font-size:36px">Summer Workshop on Artificial Intelligence:</span><br/>
+		<span style="font-size:24px">Special Topic on Human, Crowd, Environment, and Robotics</span>
+		<p></p>
+	</center>
+
+	<p align="center">
+		<iframe width="720" height="363	" src="https://www.youtube.com/embed/EfPaJpmQ_9w?autoplay=1&control=1&mute=1&showinfo=0&loop=1&playlist=EfPaJpmQ_9w" frameborder="0" allow="autoplay; encrypted-media" align="center"></iframe>
+		<br/>A simulation showing how crowd escape through narrow exits. Video created by <a href="https://www.sohn.tech/">Samuel S. Sohn</a>.
+	</p>	
+
+	<table align=center width=850px>
+		<center><h1 id="ws-top">Introduction</h1></center>
+		<tr>
+			<td>
+Computing is a ubiquitous part of modern life. However, it is also clear that large groups of our population are not yet included in computing research, education, and jobs. As a part of <a href="https://project-nucleum.github.io/BPC">Broadening Participation in Computing Plan</a> under Rutgers-TCNJ collaborative research <a href="https://project-nucleum.github.io">Project NUCLEUM</a>, this student-focused workshop aims to provide high school students gain experience in artificial intelligence through one-day workshops at Rutgers Universtiy and The College of New Jersey (TCNJ).
+			</td>
+		</tr>
+	</table>
+	
+	<hr>
+	
+	<table align=center width=850px>
+	<tr>
+		<td style="color: red">
+		IMPORTANT (As of April 26, 2022): ALL event attendees must provide proof of vaccination or negative PCR test from a test taken no more than 72 hours before the event when entering an event. Face coverings are required in all <a href="https://coronavirus.rutgers.edu/event-protocol-update/" target="_blank">Rutgers</a> and TCNJ buildings. 
+		</td>
+	</tr>
+	<tr>
+		<td>
+		The workshops may be cancelled if COVID-related on-campus activity restrictions are applied. Any last minute changes will be notified to accepted participants individually, as soon as the information become available.
+		</td>
+	</tr>
+	</table>
+
+	<br>
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1 id="ws-std">Workshop for High School Students</h1></center>
+		<tr>
+			<td colspan=2>
+			<center><h2>Tentative Schedule of The Day</h2></center>
+			</td>
+		</tr>
+		<tr id=ROW1>
+			<td>
+			8:00 am - 10:00 am
+			</td>
+			<td>
+			Travel to Rutgers University
+			</td>
+		</tr>
+		<tr id=ROW2>
+			<td>
+			10:00 am - 11:30 am
+			</td>
+			<td>
+			<h3>Session 1: Visit Rutgers University Research Labs</h3>
+			Students will be exposed to state-of-the-art research projects and outcomes in AI, computer graphics, simulation, and robotics. There will be discussion based activities and interaction with graduate students.
+			</td>
+		</tr>
+		<tr id=ROW1>
+			<td>
+			11:30 am - 1:30 pm
+			</td>
+			<td>
+			Travel to TCNJ and Lunch
+			</td>
+		</tr>
+		<tr id=ROW2>
+			<td>
+			1:30 pm - 2:10 pm
+			</td>
+			<td>
+			<h3>Session 2: Visit TCNJ Computer Science Research Labs</h3>
+			Students will visit the TCNJ research lab participating in this project. They will be introduced to a selected set of research topics in AI that are related to this project.
+			</td>
+		</tr>
+		<tr id=ROW1>
+			<td>
+			2:10 pm - 2:30 pm
+			</td>
+			<td>
+			Break
+			</td>
+		</tr>
+		<tr id=ROW2>
+			<td>
+			2:30 pm - 5:00 pm
+			</td>
+			<td>
+			<h3>Session 3: Hands-on session about selected topics in AI</h3>
+			Students will experience some basic examples of AI research topics that were introduced in Session 2. Specifically, students will be given a simplified robot navigation problem, and will be provided with software tools to see how the software can be used to solve the problem. Some easy-to-understand computer science concepts and algorithms used in the software will be explained as well.
+			<table>
+			<tr>
+				<td align="center">
+				<img src="https://project-nucleum.github.io/resources/bpc_std_ws_3-1.png" style="vertical-align:middle">
+				</td>
+				<td>
+				You will participate in an on-going research activity by navigating and evacuating from virtual reality environments.
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+				<img src="https://project-nucleum.github.io/resources/bpc_std_ws_3-2.png" style="vertical-align:middle">
+				</td>
+				<td>
+				You will see how well you and your peers did in the evacuation tasks!
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+				<img src="https://project-nucleum.github.io/resources/bpc_std_ws_3-3.png" style="vertical-align:middle">
+				</td>
+				<td>
+				Time permitting, you will see how real robots can navigate in environments based on the steering policy you design.
+				</td>
+			</tr>
+			</table>
+			</td>
+		</tr>
+		<tr id=ROW1>
+			<td>
+			5:00 pm - 6:00 pm
+			</td>
+			<td>
+			Travel time to return to schools
+			</td>
+		</tr>		
+		<tr>
+			<td colspan=2>
+			&nbsp;
+			</td>
+		</tr>
+		<tr>
+			<td colspan=2>
+			<center><h2>Frequently Asked Questions</h2></center>
+			</td>
+		</tr>
+		<tr id=ROW1>
+			<td><b>
+			What is the experience?
+			</b></td>
+			<td>
+			There will be visits to: Sequence Analysis and Modeling Lab (Rutgers), Intelligent Visual Interfaces Lab (Rutgers), Computer Science Research Lab (TCNJ), participation in hands-on activities of real-world Artificial Intelligence (AI) research projects.
+			</td>
+		</tr>
+		<tr id=ROW2>
+			<td><b>
+			Who is eligible to apply?
+			</b></td>
+			<td>
+			This year (2022), students from Hamilton Township School District (HTSD) and Mercer County Technical Schools (MCTS) in New Jersey are invited to participate. We aim to expand the participants from other school districts in the years to come. If you are from other school districts and interested in future opportunities, please reach out to Dr. Sejong Yoon at TCNJ.
+			</td>
+		</tr>
+		<tr id=ROW1>
+			<td><b>
+			What sort of things will I be learning and how do they relate to the real world?
+			</b></td>
+			<td>
+			<ul>
+				<li>Do you have questions about artificial intelligence?</li>
+				<li>What are some uses of AI in the real world?</li>
+				<li>How can AI be used to predict events, such as evacuation routes for large crowd gatherings, or emergency evacuations in large high rise buildings?</li>
+				<li>What’s the technology behind self-driving cars?</li>
+				<li>How is AI used to solve environmental problems and other global issues?</li>
+			</ul>
+			</td>
+		</tr>
+		<tr id=ROW2>
+			<td><b>
+			Do I need to know anything about computer science or coding for this event?
+			</b></td>
+			<td>
+			No experience is necessary and by the end of the event, you will have an opportunity to learn how to solve a problem with programs using AI.
+			</td>
+		</tr>
+		<tr id=ROW1>
+			<td><b>
+			When is the field trip?
+			</b></td>
+			<td>
+			Wednesday, June 8, 2022
+			</td>
+		</tr>
+		<tr id=ROW2>
+			<td><b>
+			Will transportation be provided?
+			</b></td>
+			<td>
+			Yes, a bus will pick you up and drop you off at your home high school. <br/>
+			Morning: West (HTSD), Steinert (HTSD), Nottingham (HTSD), Sypek (MCTS) <br/>
+			Evening: Sypek (MCTS), Nottingham (HTSD), Steinert (HTSD), West (HTSD) <br/>
+			&nbsp;<br/>
+			* Note:  Students who attend HEP should plan to get the bus from West.
+			</td>
+		</tr>
+		<tr id=ROW1>
+			<td><b>
+			What is the time of the field trip?
+			</b></td>
+			<td>
+			Transportation to Rutgers: 8:00 am - 9:30 pm</br>
+			Field Trip to Rutgers and TCNJ: 9:30 am - 5:00 pm<br/> 
+			Transportation back to home high schools: 5:00 pm - 6:30 pm<br/>
+			&nbsp;<br/>
+			**As the date of the trip nears, more specific time windows will be provided for pick up and return to schools.
+			</td>
+		</tr>
+		<tr id=ROW2>
+			<td><b>
+			How do I apply for this Field Trip?
+			</b></td>
+			<td>
+			<a href="https://forms.gle/jAtStdTiU6obeUwd9">Application - Submit by May 11, 2022</a>
+			</td>
+		</tr>
+		<tr id=ROW1>
+			<td><b>
+			If I already filled out the form, do I have to fill it out again?
+			</b></td>
+			<td>
+			No.  Your responses are saved.
+			</td>
+		</tr>
+		<tr id=ROW2>
+			<td><b>
+			Is there an age requirement?
+			</b></td>
+			<td>
+			Interested students should apply.  Students who are not 17 will need to have a parent/guardian sign the permission form when it is available.
+			</td>
+		</tr>
+		<tr id=ROW1>
+			<td><b>
+			Is there a cost for me to attend the event?
+			</b></td>
+			<td>
+			No. Up to 30 HTSD/MTCS students have a unique opportunity for a computer science day of learning thanks to support from a National Science Foundation research grant awarded to Dr. Sejong Yoon at TCNJ.
+			</td>
+		</tr>
+		<tr id=ROW2>
+			<td><b>
+			How will I know that I have been accepted to attend the field trip?
+			</b></td>
+			<td>
+			You will receive an email from Dr. Sejong Yoon with news of your acceptance and additional details on or about May 18, 2022.
+			</td>
+		</tr>
+	</table>
+	
+	<br>
+	<hr>
+	
+	<table align=center width=850px>
+		<center><h1 id="ws-history">Workshop History</h1></center>
+		<tr>
+			<td colspan=2>
+			This workshop is a four-year project started in Summer 2021. We keep the exciting memory here.
+			</td>
+		</tr>
+		<tr>
+			<td colspan=2>
+			<center><h2>2021</h2></center>
+			</td>
+		</tr>
+		<tr id=ROW1>
+			<td>
+			Student Participant Demographic
+			</td>
+			<td>
+			<ul>
+				<li>27 applicants</li>
+				<li>55% female / 45% male</li>
+				<li>30% black or african american / 37% hispanic or latinx</li>
+				<li>Invited all 27; 12 final participants</li>
+			</ul>
+			</td>
+		</tr>
+		<tr id=ROW2>
+			<td>
+			Pieces of Memories
+			</td>
+			<td>
+			<img src="https://project-nucleum.github.io/resources/bpc_2021_std_censor.PNG" width="400" style="vertical-align:middle"/>
+			</td>
+		</tr>
+	</table>
+
+	<br>
+	<hr>
+	
+	<table align=center width=900px>
+		<tr>
+			<td width=400px>
+				<left>
+					<center><h1>Acknowledgements</h1></center>
+					<center>
+					<img src="https://project-nucleum.github.io/resources/nsf_logo.png" width="50" style="vertical-align:middle"/>
+					This project is supported by National Science Foundation Grant Awards <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1955404">#1955404</a> and <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1955365">#1955365</a>.
+					</center>
+				</left>
+			</td>
+		</tr>
+	</table>
+
+<br>
+</body>
+</html>
+	
+	
+
+
